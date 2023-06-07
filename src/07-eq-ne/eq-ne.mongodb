@@ -1,0 +1,13 @@
+use("Platzi_store")
+
+//db.inventory.find({ qty: 20 })
+//db.inventory.find({ qty:  { $eq: 20 }}); Same as above but $eq is implicit
+
+// SUBDOCUMENTS
+//db.inventory.find({"item.name": "ab"}); Subdocuments may be expressed as strings key.value
+
+// USING $ne
+// Not equal must be expressed be way as follows
+db.inventory.find({ qty: { $ne: 20 }})
+
+
